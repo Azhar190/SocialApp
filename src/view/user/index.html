@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- User Management -->
+      <div id="userManagement">
+        <h2>User Management</h2>
+        <form id="registrationForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <label for="profilePicture">Profile Picture:</label>
+          <input type="file" id="profilePicture" name="profilePicture" />
+          <button type="button" onclick="registerUser()">Register</button>
+        </form>
+        <br /><br />
+        <form id="loginForm">
+          <label for="loginEmail">Email:</label>
+          <input type="email" id="loginEmail" name="loginEmail" required />
+          <label for="loginPassword">Password:</label>
+          <input
+            type="password"
+            id="loginPassword"
+            name="loginPassword"
+            required
+          />
+          <button type="button" onclick="loginUser()">Login</button>
+        </form>
+        <br /><br />
+        <form id="profileForm">
+          <label for="updateUsername">New Username:</label>
+          <input type="text" id="updateUsername" name="updateUsername" />
+          <label for="updateEmail">New Email:</label>
+          <input type="email" id="updateEmail" name="updateEmail" />
+          <label for="updateProfilePicture">New Profile Picture:</label>
+          <input
+            type="file"
+            id="updateProfilePicture"
+            name="updateProfilePicture"
+          />
+          <button type="button" onclick="updateUserProfile()">
+            Update Profile
+          </button>
+        </form>
+      </div>
+
+      <!-- Post Management -->
+      <div id="postManagement">
+        <h2>Post Management</h2>
+        <form id="postForm">
+          <label for="postContent">Post Content:</label>
+          <textarea id="postContent" name="postContent" required></textarea>
+          <label for="postImage">Post Image:</label>
+          <input type="file" id="postImage" name="postImage" />
+          <button type="button" onclick="createPost()">Create Post</button>
+        </form>
+      </div>
+
+      <!-- Comment Management -->
+      <div id="commentManagement">
+        <h2>Comment Management</h2>
+        <form id="commentForm">
+          <label for="commentContent">Comment Content:</label>
+          <textarea
+            id="commentContent"
+            name="commentContent"
+            required
+          ></textarea>
+          <button type="button" onclick="createComment()">
+            Create Comment
+          </button>
+        </form>
+      </div>
+
+      <!-- Likes Management -->
+      <div id="likeManagement">
+        <h2>Likes Management</h2>
+        <button type="button" onclick="likePost()">Like Post</button>
+        <button type="button" onclick="unlikePost()">Unlike Post</button>
+      </div>
+
+      <!-- Followers Management -->
+      <div id="followerManagement">
+        <h2>Followers Management</h2>
+        <button type="button" onclick="followUser()">Follow User</button>
+        <button type="button" onclick="unfollowUser()">Unfollow User</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
